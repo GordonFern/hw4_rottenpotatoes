@@ -20,6 +20,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
   gem 'ZenTest'
+  gem 'simplecov'
 end
 
 group :production do

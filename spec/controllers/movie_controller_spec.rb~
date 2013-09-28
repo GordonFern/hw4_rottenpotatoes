@@ -1,0 +1,12 @@
+require 'spec_helper'
+describe MoviesController do
+  describe 'List movies by director' do
+    it 'should call the model method that searches movies by director' do
+      fake_results = mock('Movie')
+      Movie.should_receive(:find_by_director).with('alfonze').
+         and_return(fake_results)
+      get :movies_by_director,{:director=>'alfonze'}
+    end
+    it 'should render movies by director screen'
+  end
+end
